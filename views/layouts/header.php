@@ -84,13 +84,16 @@
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <?php if (isset($_SESSION['user_id'])): ?>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown d-flex align-items-center">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle"></i> 
                             <?php echo htmlspecialchars($_SESSION['user_fullname'] ?? $_SESSION['username']); ?> 
                             <span class="badge bg-secondary ms-2">
                                 <?php echo htmlspecialchars($_SESSION['user_role']); ?>
                             </span>
+                        </a>
+                        <a href="index.php?controller=auth&action=logout" class="btn btn-outline-danger btn-sm ms-2" title="Đăng Xuất">
+                            <i class="bi bi-box-arrow-right"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
