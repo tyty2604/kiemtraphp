@@ -1,0 +1,389 @@
+/* Basic Styling - Enhance as needed */
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+header nav a:hover {
+  background-color: #555;
+}
+header nav span {
+  margin-right: 15px;
+  color: #ccc;
+}
+
+main {
+  max-width: 1100px; /* Limit width for larger screens */
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+h2 {
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 10px; /* Increased padding */
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.gender-cell img {
+  display: block;
+  margin: 0 auto; /* Center images if desired */
+}
+
+/* Pagination Styles */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 0 2px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #337ab7;
+  border-radius: 4px;
+}
+
+.pagination a:hover {
+  background-color: #eee;
+}
+
+.pagination .current-page {
+  background-color: #337ab7;
+  color: white;
+  border-color: #337ab7;
+  cursor: default;
+}
+
+/* Button Styles */
+.button,
+button {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 5px 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.add-button {
+  background-color: #5cb85c; /* Green */
+  color: white;
+}
+.add-button:hover {
+  background-color: #4cae4c;
+}
+
+.edit-button {
+  background-color: #f0ad4e; /* Orange */
+  color: white;
+}
+.edit-button:hover {
+  background-color: #ec971f;
+}
+
+.delete-button {
+  background-color: #d9534f; /* Red */
+  color: white;
+}
+.delete-button:hover {
+  background-color: #c9302c;
+}
+.cancel-button {
+  background-color: #777; /* Gray */
+  color: white;
+}
+.cancel-button:hover {
+  background-color: #666;
+}
+
+/* Form Styles */
+.employee-form div,
+.login-container div {
+  margin-bottom: 15px;
+}
+
+.employee-form label,
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.employee-form input[type="text"],
+.employee-form input[type="number"],
+.employee-form select,
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 95%; /* Responsive width */
+  max-width: 400px; /* Max width for larger screens */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.employee-form input[type="radio"] {
+  margin-right: 5px;
+}
+.employee-form label[for*="phai_"] {
+  /* Style radio labels */
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: normal;
+}
+
+.employee-form small {
+  display: block;
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 3px;
+}
+
+.employee-form button[type="submit"],
+.login-container button[type="submit"] {
+  background-color: #337ab7; /* Blue */
+  color: white;
+  padding: 10px 20px;
+}
+.employee-form button[type="submit"]:hover,
+.login-container button[type="submit"]:hover {
+  background-color: #286090;
+}
+
+/* Message Styles */
+.error-message {
+  color: #d9534f; /* Red */
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.success-message {
+  color: #3c763d; /* Green */
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* Login Container Specifics */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto; /* Center login form */
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Action Links in Table */
+.action-links a {
+  margin-right: 5px;
+}
+.action-links a:last-child {
+  margin-right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%; /* Space for label */
+    text-align: right; /* Align data to the right */
+  }
+  td:before {
+    /* Use data-label for labels */
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label); /* Use data-label attribute */
+    font-weight: bold;
+    text-align: left; /* Align label to the left */
+  }
+
+  /* Add data-label attributes in the PHP view for this to work */
+  /* Example for index.php: <td data-label="Mã NV"><?php ... ?></td> */
+
+  .action-links {
+    text-align: center; /* Center action buttons on small screens */
+    padding-left: 0; /* Reset padding */
+  }
+  .action-links::before {
+    content: ""; /* Hide label for action column */
+  }
+
+  .employee-form input[type="text"],
+  .employee-form input[type="number"],
+  .employee-form select,
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: 90%; /* Adjust width */
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background: #eee;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+/* Add to existing style.css */
+
+/* Form styles applicable to register/user edit */
+.user-form div,
+.register-container div {
+  /* Include register container */
+  margin-bottom: 15px;
+}
+
+.user-form label,
+.register-container label {
+  /* Include register container */
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.user-form input[type="text"],
+.user-form input[type="email"], /* Add email */
+.user-form input[type="password"], /* Add password */
+.user-form select,
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"] {
+  width: 95%;
+  max-width: 400px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Specific container for registration */
+.register-container {
+  max-width: 450px; /* Slightly wider for more fields */
+  margin: 30px auto; /* Center form */
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Error text styling within forms */
+.error-text {
+  color: #d9534f; /* Red */
+  font-size: 0.85em;
+  display: block; /* Ensure it appears below the input */
+  margin-top: 3px;
+}
+
+/* Adjust input border on error */
+.user-form input.error, /* You might need JS to add this class based on $errors */
+.register-container input.error {
+  border-color: #d9534f;
+}
+
+.user-form small {
+  /* Style hints */
+  display: block;
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 3px;
+}
+
+/* Adjust table action links width if needed */
+td.action-links {
+  white-space: nowrap; /* Prevent buttons wrapping */
+}
