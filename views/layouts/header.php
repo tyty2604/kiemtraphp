@@ -10,38 +10,63 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Custom CSS -->
     <style>
-        /* Enhanced styling */
         body { 
             padding-top: 80px; 
-            background-color: #f4f6f9;
+            background-color: #f0f4f8;
         }
         .navbar {
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #2c3e88 0%, #3498db 100%) !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
         }
         .navbar-brand {
             font-weight: 700;
             display: flex;
             align-items: center;
+            color: white !important;
+            font-size: 1.4rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
         .navbar-brand i {
             margin-right: 10px;
-            font-size: 1.5rem;
+            font-size: 2rem;
+            color: #ffffff;
         }
         .nav-link {
+            color: rgba(255,255,255,0.85) !important;
             display: flex;
             align-items: center;
-            transition: all 0.2s ease;
-        }
-        .nav-link i {
-            margin-right: 6px;
+            transition: all 0.3s ease;
+            position: relative;
         }
         .nav-link:hover {
-            transform: translateY(-2px);
+            color: white !important;
+            transform: scale(1.05);
+        }
+        .nav-link i {
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
         }
         .dropdown-menu {
             border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background-color: #f8f9fa;
+        }
+        .badge {
+            background-color: #2980b9 !important;
         }
         @media (max-width: 992px) {
             .navbar-nav .nav-link {
@@ -52,7 +77,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="index.php?controller=nhanvien&action=index">
             <i class="bi bi-people-fill"></i> Quản Lý Nhân Sự
@@ -65,18 +90,18 @@
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?controller=nhanvien&action=index">
-                            <i class="bi bi-list-ul"></i> Danh Sách NV
+                            <i class="bi bi-list-ul"></i> Danh Sách Nhân Viên
                         </a>
                     </li>
                     <?php if ($this->isAdmin()): ?>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?controller=nhanvien&action=add">
-                                <i class="bi bi-person-plus-fill"></i> Thêm NV
+                                <i class="bi bi-person-plus-fill"></i> Thêm Nhân Viên
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?controller=user&action=index">
-                                <i class="bi bi-person-gear"></i> Quản Lý User
+                                <i class="bi bi-person-gear"></i> Quản Lý Người Dùng
                             </a>
                         </li>
                     <?php endif; ?>
@@ -92,7 +117,7 @@
                                 <?php echo htmlspecialchars($_SESSION['user_role']); ?>
                             </span>
                         </a>
-                        <a href="index.php?controller=auth&action=logout" class="btn btn-outline-danger btn-sm ms-2" title="Đăng Xuất">
+                        <a href="index.php?controller=auth&action=logout" class="btn btn-outline-light btn-sm ms-2" title="Đăng Xuất">
                             <i class="bi bi-box-arrow-right"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">

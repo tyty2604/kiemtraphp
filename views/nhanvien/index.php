@@ -40,7 +40,7 @@
                         <table class="table table-striped table-hover table-bordered">
                             <thead class="table-dark">
                                 <tr>
-                                    <th class="text-center">Mã NV</th>
+                                    <th class="text-center">Mã Nhân Viên</th>
                                     <th>Tên Nhân Viên</th>
                                     <th class="text-center">Giới Tính</th>
                                     <th>Nơi Sinh</th>
@@ -73,7 +73,7 @@
                                             <td class="text-center">
                                                 <div class="btn-group" role="group">
                                                     <a href="index.php?controller=nhanvien&action=edit&id=<?php echo $nv['Ma_NV']; ?>" 
-                                                       class="btn btn-warning btn-sm" 
+                                                       class="btn btn-primary btn-sm" 
                                                        title="Chỉnh sửa">
                                                         <i class="bi bi-pencil-fill"></i>
                                                     </a>
